@@ -7,16 +7,16 @@ using System.Web.Mvc;
 
 namespace PJCONTA.Controllers
 {
-    public class LoginController : Controller
+    public class UsuarioController : Controller
     {
-        // GET: Login
+        // GET: Usuario
         public ActionResult Index()
         {
 
             IngresosContext db = new IngresosContext();
-            List<Usuario> lista = db.Usuario.Where(a => a.UserCar == "COUNTER").ToList();
+            List<Usuario> lista = db.Usuario.Where(a => a.UserCar == "SISTEMAS").ToList();
 
-            return View();
+            return View(lista);
         }
     }
 }

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IngresosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Inactivo" Type="bit" />
+          <Property Name="IdTipo" Type="smallint" />
+          <Property Name="UserNombre" Type="varchar" MaxLength="40" />
+          <Property Name="UserClave" Type="varchar" MaxLength="12" />
+          <Property Name="UserPass" Type="varchar" MaxLength="50" />
+          <Property Name="UserFecha" Type="datetime" />
+          <Property Name="UserLoc" Type="char" MaxLength="3" />
+          <Property Name="UserAge" Type="int" />
+          <Property Name="UserNom" Type="varchar" MaxLength="30" />
+          <Property Name="UserApe" Type="varchar" MaxLength="30" />
+          <Property Name="UserCar" Type="varchar" MaxLength="30" />
+          <Property Name="UserAre" Type="varchar" MaxLength="50" />
+          <Property Name="LockLoc" Type="bit" />
+          <Property Name="LockAge" Type="bit" />
+          <Property Name="UsuarioReg" Type="varchar" MaxLength="30" />
+          <Property Name="FechaReg" Type="datetime" />
+          <Property Name="UsuarioMod" Type="varchar" MaxLength="30" />
+          <Property Name="FechaMod" Type="datetime" />
+          <Property Name="Notas" Type="varchar" MaxLength="100" />
+          <Property Name="Clave" Type="varchar" MaxLength="15" />
+          <Property Name="IdTipoUsuario" Type="int" />
+          <Property Name="swAcceso" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="IngresosModelStoreContainer">
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IngresosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Inactivo" Type="Boolean" />
+          <Property Name="IdTipo" Type="Int16" />
+          <Property Name="UserNombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="UserClave" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="UserPass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserFecha" Type="DateTime" Precision="3" />
+          <Property Name="UserLoc" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="UserAge" Type="Int32" />
+          <Property Name="UserNom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="UserApe" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="UserCar" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="UserAre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LockLoc" Type="Boolean" />
+          <Property Name="LockAge" Type="Boolean" />
+          <Property Name="UsuarioReg" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FechaReg" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioMod" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FechaMod" Type="DateTime" Precision="3" />
+          <Property Name="Notas" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Clave" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="IdTipoUsuario" Type="Int32" />
+          <Property Name="swAcceso" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IngresosModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="IngresosModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="Inactivo" ColumnName="Inactivo" />
+                <ScalarProperty Name="IdTipo" ColumnName="IdTipo" />
+                <ScalarProperty Name="UserNombre" ColumnName="UserNombre" />
+                <ScalarProperty Name="UserClave" ColumnName="UserClave" />
+                <ScalarProperty Name="UserPass" ColumnName="UserPass" />
+                <ScalarProperty Name="UserFecha" ColumnName="UserFecha" />
+                <ScalarProperty Name="UserLoc" ColumnName="UserLoc" />
+                <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+                <ScalarProperty Name="UserNom" ColumnName="UserNom" />
+                <ScalarProperty Name="UserApe" ColumnName="UserApe" />
+                <ScalarProperty Name="UserCar" ColumnName="UserCar" />
+                <ScalarProperty Name="UserAre" ColumnName="UserAre" />
+                <ScalarProperty Name="LockLoc" ColumnName="LockLoc" />
+                <ScalarProperty Name="LockAge" ColumnName="LockAge" />
+                <ScalarProperty Name="UsuarioReg" ColumnName="UsuarioReg" />
+                <ScalarProperty Name="FechaReg" ColumnName="FechaReg" />
+                <ScalarProperty Name="UsuarioMod" ColumnName="UsuarioMod" />
+                <ScalarProperty Name="FechaMod" ColumnName="FechaMod" />
+                <ScalarProperty Name="Notas" ColumnName="Notas" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="IdTipoUsuario" ColumnName="IdTipoUsuario" />
+                <ScalarProperty Name="swAcceso" ColumnName="swAcceso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
