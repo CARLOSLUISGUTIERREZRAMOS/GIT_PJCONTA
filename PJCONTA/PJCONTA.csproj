@@ -133,6 +133,9 @@
     <Content Include="Content\AdminLTE\img\user6-128x128.jpg" />
     <Content Include="Content\AdminLTE\img\user7-128x128.jpg" />
     <Content Include="Content\AdminLTE\img\user8-128x128.jpg" />
+    <Content Include="Content\Img_Company\dev.png" />
+    <Content Include="Content\Img_Company\icostar.jpg" />
+    <Content Include="Content\Img_Company\logo_starperu.png" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\plugins\bootstrap3-wysihtml5.all.min.js" />
     <Content Include="Content\AdminLTE\plugins\bootstrap3-wysihtml5.min.css" />
