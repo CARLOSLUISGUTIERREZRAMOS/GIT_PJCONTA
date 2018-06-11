@@ -45,7 +45,9 @@
             </div>
             <!-- /.lockscreen-image -->
             <!-- lockscreen credentials (contains the form) -->
-            <form class="lockscreen-credentials">
+            @using (Html.BeginForm("Validacion", "Login", FormMethod.Post, new { @class = "lockscreen-credentials" }))
+            {
+                @Html.AntiForgeryToken()
                 <div class="input-group">
                     <input type="password" class="form-control" placeholder="password">
 
@@ -53,7 +55,8 @@
                         <button type="button" class="btn"><i class="fa fa-arrow-right text-muted"></i></button>
                     </div>
                 </div>
-            </form>
+            }
+
             <!-- /.lockscreen credentials -->
 
         </div>
