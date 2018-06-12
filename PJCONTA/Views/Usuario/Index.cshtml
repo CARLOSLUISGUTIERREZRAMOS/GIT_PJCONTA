@@ -1,0 +1,113 @@
+﻿@model IEnumerable<PJCONTA.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLteLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inactivo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdTipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserClave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserPass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserFecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserLoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserNom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserApe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserCar)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuario)
+        </td>
+        <td>
+    
+            @Html.DisplayFor(modelItem => item.Inactivo)
+        </td>
+        <td>
+            @{
+                if (item.IdTipo != 2)
+                {
+                    <span>SI</span>
+                }
+                else {
+                    <span>NO</span>
+                }
+            }
+            
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserClave)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserPass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserFecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserLoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserNom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserApe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserCar)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
