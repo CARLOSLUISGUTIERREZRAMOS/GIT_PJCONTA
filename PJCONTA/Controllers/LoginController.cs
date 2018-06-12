@@ -18,5 +18,9 @@ namespace PJCONTA.Controllers
 
             return View();
         }
+
+        public ActionResult Validacion() {
+            return View("Home");
+        }
     }
 }
