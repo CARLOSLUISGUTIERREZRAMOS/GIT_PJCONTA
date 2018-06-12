@@ -1,23 +1,18 @@
-﻿using PJCONTA.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace PJCONTA.Controllers
 {
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
-        // GET: Login
+        // GET: Account
         public ActionResult Index()
         {
-            
             return View();
-        }
-
-        public ActionResult Validacion() {
-            return View("Home");
         }
     }
 }
