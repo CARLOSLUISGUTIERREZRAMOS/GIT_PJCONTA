@@ -17,7 +17,8 @@ namespace PJCONTA
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/jquery-ui.min.js"
+                        "~/Scripts/jquery-ui.min.js",
+                        "~/Scripts/jquery.validate.unobtrusive.min.js"
                         ));
 
             // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información. De este modo, estará
@@ -30,9 +31,9 @@ namespace PJCONTA
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.min.css",
-                      
                       "~/Content/AdminLTE/AdminLTE.min.css",
                       "~/Content/AdminLTE/skins/skin-blue.css",
+                      "~/css/font-awesome.min.css",
                       "~/Content/AdminLTE/plugins/bootstrap3-wysihtml5.min.css"
                       ));
         }

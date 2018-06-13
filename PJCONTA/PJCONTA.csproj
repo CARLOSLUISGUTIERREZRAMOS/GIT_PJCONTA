@@ -95,6 +95,9 @@
     <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
+    <Reference Include="WebIcons, Version=1.0.0.0, Culture=en-GB, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebIcons.1.0.1.0\lib\net20\WebIcons.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -154,6 +157,9 @@
     <Content Include="Content\Img_Company\dev.png" />
     <Content Include="Content\Img_Company\icostar.jpg" />
     <Content Include="Content\Img_Company\logo_starperu.png" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Models\ModelIngresos.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelIngresos.Context.cs</LastGenOutput>
@@ -692,6 +698,11 @@
     <Content Include="Models\ModelIngresos.edmx.diagram">
       <DependentUpon>ModelIngresos.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -708,13 +719,11 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminLteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
-
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -765,9 +774,9 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Index_bk.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
-
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
