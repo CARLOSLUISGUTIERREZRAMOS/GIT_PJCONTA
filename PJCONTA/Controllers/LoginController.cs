@@ -37,11 +37,7 @@ namespace PJCONTA.Controllers
                 return View();
 
             }
-
-            
-           
-
-           
+                                   
         }
 
         public ActionResult Test() {
