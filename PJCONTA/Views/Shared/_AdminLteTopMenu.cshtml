@@ -28,15 +28,15 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src='@Url.Content("~/Content/Img_Company/dev.png")' class="user-image" alt="User Image" />
-                        <span class="hidden-xs">Nombre Apellido [DB]</span>
+                        <span class="hidden-xs">@Session["UserNom"].ToString()</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
                             <img src='@Url.Content("~/Content/Img_Company/dev.png")' class="img-circle" alt="User Image" />
                             <p>
-                                Nombre User[DB] - Cargo[DB]
-                                <small>Fecha de Ingreso [DB]</small>
+                                @Session["UserNom"].ToString() @Session["UserApe"].ToString()
+                                <small>@Session["UserCar"].ToString()</small>
                             </p>
                         </li>
 
@@ -46,7 +46,7 @@
                                 <a href="#" class="btn btn-default btn-flat">Perfil</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Cerrar Sesión</a>
+                                <a href="@Url.Action("LogOut","Home")" class="btn btn-default btn-flat">Cerrar Sesión</a>
                             </div>
                         </li>
                     </ul>

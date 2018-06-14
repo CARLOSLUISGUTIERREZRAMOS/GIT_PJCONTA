@@ -1,14 +1,19 @@
 ﻿@{
+
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Home/Login");
+    }
     // ESTABLECEMOS EL TITULO DEL CONTENIDO PRINCIPAL
     ViewBag.Title = "Inicio";
     // TEXTO ADICIONAL DEL TITULO (MENOR TAMAÑO)
-    ViewBag.TitleSmall = "Bienvenido [Nombre Usuario]";
+    
 
     //Relación ubicacion (TEXTO - ? -ICONO)
 
     ViewBag.Breadcrumb = new Breadcrumb(new Crumb[] {
         new Crumb("Principal","","fa-home")
-    }); 
+    });
 }
 <div class="row">
     <div class="col-xs-12">
