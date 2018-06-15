@@ -42,6 +42,5 @@ namespace PJCONTA.Models
         public string Clave { get; set; }
         public Nullable<int> IdTipoUsuario { get; set; }
         public bool swAcceso { get; set; }
-        public string MensajeError { get; set; }
     }
 }

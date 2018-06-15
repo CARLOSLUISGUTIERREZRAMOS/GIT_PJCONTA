@@ -38,8 +38,8 @@ namespace PJCONTA.Controllers
 
                     if (obj == null)
                     {
-                        u.MensajeError = "Credenciales no validas";
-                        return View("Login",u);
+                        ViewBag.MensajeError = "Credenciales no validas";
+                        return View("Login");
 
                     }
                     else
