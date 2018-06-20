@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Security.Cryptography;
 using System.Text;
 
+
 namespace PJCONTA.Controllers
 {
     public class HomeController : Controller
@@ -30,11 +31,12 @@ namespace PJCONTA.Controllers
             {
                 //Empleando using para no dejar conexiones abiertas inncesarias 
                 using (IngresosContext db = new IngresosContext())
+
                 {
                     //return RedirectToAction("Index", "Home");
-                                        
+
                     var Hash = Encrypt.GetMD5(u.UserPass);
-                    var obj = db.Usuario.Where(uModel => uModel.IdUsuario.Equals(u.IdUsuario) &&  uModel.UserPass == Hash).FirstOrDefault();
+                    var obj = db.Usuario.Where(uModel => uModel.IdUsuario.Equals(u.IdUsuario) && uModel.UserPass == Hash).FirstOrDefault();
 
                     if (obj == null)
                     {
@@ -44,17 +46,17 @@ namespace PJCONTA.Controllers
                     }
                     else
                     {
-                        
+
                         Session["IdUsuario"] = obj.IdUsuario.ToString();
                         Session["UserNom"] = obj.UserNom.ToString();
                         Session["UserApe"] = obj.UserApe.ToString();
                         Session["UserCar"] = obj.UserCar.ToString();
-                        return RedirectToAction("Index");   
+                        return RedirectToAction("Index");
                     }
-                  
-             
-                    
-                    
+
+
+
+
                 }
             }
             catch (Exception ex)

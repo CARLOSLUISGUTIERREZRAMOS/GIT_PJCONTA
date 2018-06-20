@@ -697,6 +697,7 @@
     </EntityDeploy>
     <Content Include="Models\ModelIngresos.edmx.diagram">
       <DependentUpon>ModelIngresos.edmx</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
@@ -721,10 +722,24 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminLteController.cs" />
+    <Compile Include="Controllers\AgentesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Agentes.cs">
+      <DependentUpon>ModelIngresos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgentesCuentas.cs">
+      <DependentUpon>ModelIngresos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgentesMaster.cs">
+      <DependentUpon>ModelIngresos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgentesModel.cs" />
+    <Compile Include="Models\AgentesTarjetas.cs">
+      <DependentUpon>ModelIngresos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelIngresos.Context.cs">
       <AutoGen>True</AutoGen>
@@ -740,6 +755,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelIngresos.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoAgencia.cs">
+      <DependentUpon>ModelIngresos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoAgente.cs">
+      <DependentUpon>ModelIngresos.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
       <DependentUpon>ModelIngresos.tt</DependentUpon>
@@ -775,6 +796,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Agentes\ListaAgentes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

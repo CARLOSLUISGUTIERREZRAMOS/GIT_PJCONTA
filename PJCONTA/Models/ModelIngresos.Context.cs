@@ -26,5 +26,11 @@ namespace PJCONTA.Models
         }
     
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Agentes> Agentes { get; set; }
+        public virtual DbSet<AgentesCuentas> AgentesCuentas { get; set; }
+        public virtual DbSet<AgentesMaster> AgentesMaster { get; set; }
+        public virtual DbSet<AgentesTarjetas> AgentesTarjetas { get; set; }
+        public virtual DbSet<TipoAgente> TipoAgente { get; set; }
+        public virtual DbSet<TipoAgencia> TipoAgencia { get; set; }
     }
 }
