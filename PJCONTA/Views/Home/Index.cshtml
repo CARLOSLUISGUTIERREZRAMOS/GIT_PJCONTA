@@ -7,13 +7,13 @@
     // ESTABLECEMOS EL TITULO DEL CONTENIDO PRINCIPAL
     ViewBag.Title = "Inicio";
     // TEXTO ADICIONAL DEL TITULO (MENOR TAMAÑO)
-    
+
 
     //Relación ubicacion (TEXTO - ? -ICONO)
 
     ViewBag.Breadcrumb = new Breadcrumb(new Crumb[] {
-        new Crumb("Principal","","fa-home")
-    });
+new Crumb("Principal","","fa-home")
+});
 }
 <div class="row">
     <div class="col-xs-12">
@@ -26,17 +26,23 @@
 
 
                 MSJ TEST
-                
+
 
             </div>
 
             <div id="footerDetalle" class="box-footer">
-                @{ 
-                    
+                @{
+
                 }
             </div>
 
         </div>
     </div>
-    </div>
+</div>
+@section scripts {
+    @*NOTE: These should NOT be used in a production situation
+        They do contains useful snippets on how to setup charts*@
+    <script src="~/Scripts/AdminLTE/pages/dashboard2.js"></script>
+    <script src="~/Scripts/AdminLTE/demo.js"></script>
+}
 

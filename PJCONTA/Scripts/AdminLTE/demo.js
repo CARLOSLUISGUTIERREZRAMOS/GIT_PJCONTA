@@ -27,13 +27,13 @@ $(function () {
     "box-shadow": "0 1px 3px rgba(0,0,0,0.1)"
   }).addClass("no-print");
   demo_settings.append(
-          "<h4 class='text-light-blue' style='margin: 0 0 5px 0; border-bottom: 1px solid #ddd; padding-bottom: 15px;'>Layout Options</h4>"
+          "<h4 class='text-light-blue' style='margin: 0 0 5px 0; border-bottom: 1px solid #ddd; padding-bottom: 15px;'>Personalizar</h4>"
           //Fixed layout
           + "<div class='form-group'>"
           + "<div class='checkbox'>"
           + "<label>"
           + "<input type='checkbox' onchange='change_layout(\"fixed\");'/> "
-          + "Fixed layout"
+          + "Fijar Plantilla"
           + "</label>"
           + "</div>"
           + "</div>"
@@ -42,7 +42,7 @@ $(function () {
           + "<div class='checkbox'>"
           + "<label>"
           + "<input type='checkbox' onchange='change_layout(\"layout-boxed\");'/> "
-          + "Boxed Layout"
+          + "Centrar Plantilla"
           + "</label>"
           + "</div>"
           + "</div>"
@@ -51,7 +51,7 @@ $(function () {
           + "<div class='checkbox'>"
           + "<label>"
           + "<input type='checkbox' onchange='change_layout(\"sidebar-collapse\");'/> "
-          + "Collapsed Sidebar"
+          + "Ocultar men&uacute;"
           + "</label>"
           + "</div>"
           + "</div>"
