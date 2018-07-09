@@ -1,0 +1,57 @@
+﻿@* 
+ This partial controls the top menu of the AdminLTE Template, being called automatically by _AdminLteLayout
+    TODO: All of the content in here is stand-in that must be replaced by the real behavior of your app
+*@
+
+@{
+    ViewBag.Layout = null;
+}
+
+<header class="main-header">
+    <!-- Logo -->
+    <a href='@Url.Action("index","Home")' class="logo">
+
+        <img src='@Url.Content("~/Content/Img_Company/logo_starperu.png")' class="img-responsive" alt="STARPERU">
+
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src='@Url.Content("~/Content/Img_Company/dev.png")' class="user-image" alt="User Image" />
+                        <span class="hidden-xs">@Session["UserNom"].ToString()</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header">
+                            <img src='@Url.Content("~/Content/Img_Company/dev.png")' class="img-circle" alt="User Image" />
+                            <p>
+                                @Session["UserNom"].ToString() @Session["UserApe"].ToString()
+                                <small>@Session["UserCar"].ToString()</small>
+                            </p>
+                        </li>
+
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="@Url.Action("LogOut","Home")" class="btn btn-default btn-flat">Cerrar Sesión</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

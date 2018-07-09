@@ -1,0 +1,68 @@
+﻿@model PJCONTA.Models.Usuario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StarPeru | Log in</title>
+    <link rel="icon" type="image/png" href='@Url.Content("~/Content/Img_Company/icostar.jpg")'>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Ionicons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style, Bootstrap 3.3.7,Font Awesome,LTE -->
+    @Styles.Render("~/Content/css")
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="/"><b>SISTEMAS</b>STARPERU</a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Ingresa tus datos para ingresar al sistema</p>
+
+            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group has-feedback">
+                    @Html.TextBoxFor(model => model.IdUsuario, new { @class = "form-control", @placeholder = "USUARIO" })
+                    @Html.ValidationMessageFor(model => model.IdUsuario, "", new { @class = "text-danger" })
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    @Html.PasswordFor(model => model.UserPass, new { @class = "form-control", @placeholder = "CONTRASEÑA" })
+                    @Html.ValidationMessageFor(model => model.UserPass, "", new { @class = "text-danger" })
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+
+                    <!-- /.col -->
+                    <div class="col-xs-12">
+                        <button type="submit" class="btn btn-danger btn-block btn-flat">Iniciar Sesión</button>
+                    </div>
+                    
+                        <div class=" col-xs-12">
+                            <label class="text-danger text-right">@ViewBag.MensajeError</label>
+                        </div>
+                    
+
+                    <!-- /.col -->
+                </div>
+            }
+        </div>
+        <!-- /.login-box-body -->
+    </div>
+    <!-- /.login-box -->
+    @* Bundles assume jquery 2.1.3 and Bootstrap 3 *@
+    @Scripts.Render("~/bundles/jquery")
+
+</body>
+</html>

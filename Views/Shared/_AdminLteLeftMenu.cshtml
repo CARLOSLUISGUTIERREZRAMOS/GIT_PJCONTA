@@ -1,0 +1,349 @@
+﻿@*
+    This partial controls the left menu of the AdminLTE dashboard and is called automatically by _AdminLteLayout
+       This is where you can add, modify, or remove navigation options in your app
+       TODO: This preserves the links as-is for the demo, which lead to broken pages!
+       It's up to you to make sure these links either get deleted or lead somewhere REAL!
+*@
+
+
+@{
+    Layout = null;
+}
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">Menú de Navegación</li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-folder"></i> <span>RAS</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-sitemap"></i> Sistema<i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-circle-o"></i><span>Tablas</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Agentes</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> System test</i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Cambiar contraseña</i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Seguridad<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Usuarios y Acceso</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Programas</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-money"></i> <span>Ventas</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Recepción de Reportes</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Registro de Reportes</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Consultas<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Facturas</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Depositos</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Gastos</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Tarjetas</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Ventas Dinamico</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Reportes Lista Detallada</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Reportes Diferencias Facturas</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Ventas por Fecha de Reporte</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Ventas por Fecha de Emisión</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> IGV Gobierno Regional Old</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> IGV Gobierno Regional New</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Ventas Anuales Fec Reporte</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Descuentos por Año</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Ventas Anual por Fecha de Reporte</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li class="nav-devider"></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Ventas Anual por Fecha de Emisión</a></li>
+                                </ul>
+
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Registro de Depósitos BSP</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Analisis<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Valorización Mensual</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Listas de Incosistencias</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Generar PDT</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-search"></i> <span>Consultas</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Consulta de Boletos</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Pasajeros por nombre</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Consultas Varias</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Consultas Varias</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Usos no reportados<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Por Localidad Totales</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Por Localidad Detalles</a></li>
+                                </ul>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Por Agente / Agencia</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Usos Reportados VOID</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Ventas GDS No Reportada</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Producción de Usuarios</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Venta Diferida</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Consulta Otros Ingresos</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Exchange no Marcados</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Tarjetas no marcadas</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Boletos Endosados (Local)</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-wrench"></i> <span>Utilitarios</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Importar Vuelos</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Marcado de Boletos por Promoción</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-share-alt-square"></i> <span>Interlineas</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> IxC Cupones por Facturar</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> IxC Registro de Cupones</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> IxC Batch Generados</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-calculator"></i> <span>Cta Cte</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Nota de Crédito</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Cuenta Canje</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-question-circle"></i> <span>Ayuda</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Acerca de</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-cubes"></i> <span>CARGA</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle-o"></i><span>Maestros</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Tarifas Carga</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Tarifas Tax/Corpac</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Tarifas Tax - Feretros</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Entidades</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Personal</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Clientes-Créditos</a></li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Tipo de Cambio<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Mantenimiento</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Relación</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Formas Valoradas</a></li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i> Tablas Auxiliares<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Equipos/Aeronaves</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Lista de Conductores</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Tipos de Carga</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle-o"></i><span>Registro de Guias</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Administración de Valores</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Aceptación de Guías</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Punto de Venta</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Registro de CPAS Mec</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Registro de CPAS Man</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Reg de COMAIL-COMAT</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Reg de Notas de Creditos</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Situación de CPAS</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle-o"></i><span>Manifiestos de Carga</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-circle-o"></i><span>Manifiesto de Salida</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Preliminar</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Creación</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Modificación</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Consulta</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-circle-o"></i> <span>Act.manif.llegada</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Recepción</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </section>
+
+    <!-- /.sidebar -->
+</aside>
